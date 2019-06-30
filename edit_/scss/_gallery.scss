@@ -1,0 +1,98 @@
+.gallery{
+	margin-bottom: 50px;
+	.wrapper{
+		h4{
+			@include text-2-m (0, $neu-03, 0, italic);
+			text-align: center;
+			padding: 50px 0;
+			border-top: solid 1px $neu-05;
+		}
+		.gallery_container{
+			background-color:yellow;
+			height: 188px;
+			position: relative;
+			ul{
+				background-color:black;
+				white-space: nowrap;
+				font-size: 0px;
+				overflow-x: hidden;
+				@include phablet{
+					overflow-x: scroll;
+				}
+				li{
+					background-color:blue;
+					display: inline-block;
+					width: 236px;
+					
+					img{
+					}
+				}
+			}
+			.gallery_btn{
+				display: inline-block;
+				z-index: 1;
+				height: 188px;
+				width: 39px;
+				background-color:$neu-04;
+				position:absolute;
+				@include phablet{
+					display: none;
+				}
+			}
+			.left{
+				left: 0px;
+				&:before{
+					content: '';
+					display: block;
+					width: 20px;
+					right: 12px;
+					height:3px;
+					background-color:white;
+					position:absolute;
+					bottom: 92px;
+					transform: rotate(-40deg);
+					border-radius: 1px;
+				}
+				&:after{
+					content: '';
+					display: block;
+					width: 22px;
+					height:3px;
+					background-color:white;
+					position:absolute;
+					right: 12px;
+					bottom: 79px;
+					transform: rotate(40deg);
+					border-radius: 1px;
+				}
+			}		
+			.right{
+				right:0px;
+				&:before{
+					content: '';
+					display: block;
+					width: 22px;
+					height:3px;
+					background-color:white;
+					position:absolute;
+					right: 10px;
+					bottom: 92px;
+					transform: rotate(40deg);
+					border-radius: 1px;
+				}
+				&:after{
+					content: '';
+					display: block;
+					width: 22px;
+					height:3px;
+					background-color:white;
+					position:absolute;
+					right: 10px;
+					bottom: 79px;
+					transform: rotate(-40deg);
+					border-radius: 1px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,174 @@
+.navi_bar{
+	width: 100%;
+	font-size: 0px;	
+	z-index: 9999;
+	position:fixed;
+	top: 0;
+	background-color: rgba(250, 250,250, 0.6);	
+	nav{
+		width: 95%;
+		height: 115px;
+		margin: 0 auto;
+		padding-top: 30px;
+		border-bottom: solid 1px $neu-01;
+		.logo{
+			float: left;
+			display: inline-block;
+			a{
+				display: block;
+				width: 42px;
+				height: 42px;
+				background-image:url(../img/icons/sh_logo.png);
+				margin-right: 40px;
+				font-size: 0px;
+			}	
+		}
+		.seccoes_navi{
+			float: left;
+			display: inline-block;
+			///////special MQ/////////
+			@media only screen and (max-width: 900px){ 
+				display: none;
+			}
+			ul{
+				margin-top: 15px;
+				li{
+					display: inline-block;
+					margin-right: 50px;
+						&:last-child{
+							margin-right: 0px;
+						}
+					a{
+						text-decoration: none;
+						font-family: $font-1;
+						font-size: 12px;
+						text-transform: uppercase;
+						color: #303030;
+						&:hover{
+							font-weight: 700;
+						}
+
+					}
+				}
+			}
+		}
+	
+		.login_kart{
+			float: right;
+			display: inline-block;
+			///////special MQ/////////
+			@media only screen and (max-width: 500px){
+				display: none;
+			}
+			ul{
+				margin-top: 15px;
+				li{
+					display: inline-block;
+					margin-right: 70px;
+					&:last-child{
+						margin-right: 40px;
+					}
+				}
+					a{
+						text-decoration: none;
+						font-family: $font-1;
+						font-size: 14px;
+						color: #303030;
+						&:hover{
+							font-weight: 700;
+					}		
+				}
+			}
+				.login{
+					position:relative;
+					&:before{
+						content:'';
+						display: block;
+						position:absolute;
+						width: 20px;
+						height: 20px;
+						background-image:url(../img/icons/man.png);		
+						background-repeat:no-repeat;
+						background-position:bottom;	
+						top:-7px;
+						left: -23px				
+					}
+				}	
+				.kart_menu{
+					position:relative;
+					&:before{
+						content:'';
+						display: block;
+						position:absolute;
+						width: 20px;
+						height: 20px;
+						background-image:url(../img/icons/basket.png);		
+						background-repeat:no-repeat;
+						background-position:bottom;	
+						top:-7px;
+						left: -23px				
+					}	
+				}
+		}	
+		.search{
+			float: right;
+			display: inline-block;
+			///////special MQ/////////
+			@media only screen and (max-width: 900px){
+				display:none;
+			}
+			form{
+				display: none;
+				input{
+
+				}
+			}	
+			.box_lupa{
+				display: block;
+				width: 42px;
+				height:42px;
+				border: solid 1px #222222;
+				background-image:url(../img/icons/search.png);
+				background-repeat: no-repeat;
+				background-position:center;
+				font-family: 'Lato', sans-serif;
+
+			}		
+		}			
+		.hamburger{
+			display: inline-block;
+			width: 35px;
+			height: 4px;
+			background-color:#222;
+			display: none;
+			float: right;
+			position:relative;
+			top: 18px;
+			///////special MQ/////////
+			@media only screen and (max-width: 900px){
+				display: inline-block;
+			}
+			&:before{
+				content: '';
+				display: inline-block;
+				width: 35px;
+				height: 4px;
+				background-color:#222;
+				position:absolute;
+				top:-12px;
+			}
+			&:after{
+				content: '';
+				display: inline-block;
+				width: 35px;
+				height: 4px;
+				background-color:#222;
+				position:absolute;
+				bottom:-12px;
+			}	
+		}
+	}
+}
+
+
+
